@@ -161,6 +161,9 @@ A simple setup for small installations can be achived with [docker-compose](http
 `docker-compose up -d --build`
 `docker-compose run --rm artisan migrate --seed`
 ```
+
+**Note:** After pulling updates that add new seeders or other classes, run `composer dump-autoload` (or `docker-compose run --rm composer install`) to refresh Composer's autoloader.
+
 7. Optional: verify whether the docker containers are running: run `docker ps`
 8. [Check whether backend login page is working](http://localhost:8087/login)
 9. If everything is running smoothly, create a login via the frontend webapp [BEEP VUE (v3) app](https://github.com/beepnl/beep-vue-app).
